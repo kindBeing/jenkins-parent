@@ -1,3 +1,2 @@
 @merge libraries {
-    sonarqube
 }
