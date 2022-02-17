@@ -1,4 +1,4 @@
-def call (String message) {
+def call (Map config) {
     pipeline {
         agent any
         environment {
@@ -25,4 +25,3 @@ def call (String message) {
         }
     }
 }
-
