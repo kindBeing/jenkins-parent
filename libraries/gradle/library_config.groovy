@@ -1,5 +1,0 @@
-fields {
-    required {
-        parameterOne = String
-    }
- }
