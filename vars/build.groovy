@@ -1,6 +1,6 @@
 package jenkins.parent.vars
 
-def call (String message) {
+def pipe (String message) {
     pipeline {
         agent any
         environment {
