@@ -1,22 +1,28 @@
 package jenkins.parent.vars
 
-def call() {
-    stages {
-        stage('Build') {
-            steps {
-                echo 'Building..'
-                println("Building.. ${config.AppName}")
-                println("Building.. ${config.Version}")
-            }
+def call () {
+    pipeline {
+        agent any
+        environment {
+            CC = 'clang'
         }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
+        stages {
+            stage('Build') {
+                steps {
+                    echo 'Building..'
+                    println("Building.. ${config.AppName}")
+                    println("Building.. ${config.Version}")
+                }
             }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
+            stage('Test') {
+                steps {
+                    echo 'Testing..'
+                }
+            }
+            stage('Deploy') {
+                steps {
+                    echo 'Deploying....'
+                }
             }
         }
     }
