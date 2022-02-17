@@ -1,5 +1,3 @@
-package jenkins.parent.vars
-
 def call (String message) {
     pipeline {
         agent any
